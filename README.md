@@ -1,21 +1,22 @@
-# 🏛️ Museo de Mario Bros en Unity
+# 🏛️ Mario Bros Museum in Unity
 
-Bienvenido al **Museo de Mario Bros**, una experiencia 3D creada en Unity donde puedes recorrer un museo virtual lleno de objetos icónicos del universo de Mario. 🎮🍄
+Welcome to the **Mario Bros Museum**, a 3D experience created in Unity where you can explore a virtual museum filled with iconic objects from the Mario universe. 🎮🍄
 
-## ✨ Características
-- Entorno 3D inspirado en Mario Bros.
-- Movimiento en primera persona.
-- Objetos clásicos como tuberías, bloques y monedas.
-- Iluminación y ambientación temática.
+## ✨ Features
+- 3D environment inspired by Mario Bros.
+- First-person movement.
+- Classic objects such as pipes, blocks, and coins.
+- Themed lighting and ambience.
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 - **Unity**
 - **C#**
-- Assets personalizados e importados.
+- Custom and imported assets.
 
-## ▶️ Cómo ejecutar
-1. Clona el repositorio:
+## ▶️ How to Run
+1. Clone the repository:
    ```bash
-   git clone https://github.com/tu_usuario/museo-mario-unity.git
-2. Abre la carpeta del proyecto desde Unity Hub.
-3. Ejecuta la escena principal ubicada en Assets/Scenes/.
+   git clone https://github.com/martinsoteIo/marioBros_museum.git
+2. Open the project folder using Unity Hub.
+
+3. Run the main scene located in Assets/Scenes/.

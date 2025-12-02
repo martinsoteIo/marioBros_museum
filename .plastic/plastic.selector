@@ -1,0 +1,4 @@
+repository "gpi_proyecto_final/GPI@1375856242481@cloud"
+  path "/"
+    br "/main"
+    co "/main"

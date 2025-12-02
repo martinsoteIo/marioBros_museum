@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.5.0" xmlns="http://www.collada.org/2008/03/COLLADASchema">
+	<asset>
+		<contributor>
+			<authoring_tool>BrawlBox</authoring_tool>
+		</contributor>
+		<created>2018-12-22T23:35:06Z</created>
+		<modified>2018-12-22T23:35:06Z</modified>
+		<unit meter="0.01" name="centimeter" />
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_images>
+		<image id="block_pow_all-image" name="block_pow_all">
+			<init_from>
+				<ref>block_pow_all.png</ref>
+			</init_from>
+		</image>
+		<image id="lm_01mo-image" name="lm_01mo">
+			<init_from>
+				<ref>lm_01mo.png</ref>
+			</init_from>
+		</image>
+		<image id="lm_02mo-image" name="lm_02mo">
+			<init_from>
+				<ref>lm_02mo.png</ref>
+			</init_from>
+		</image>
+	</library_images>
+	<library_materials>
+		<material id="mat_block_pow">
+			<instance_effect url="#mat_block_pow-fx" />
+		</material>
+	</library_materials>
+	<library_effects>
+		<effect id="mat_block_pow-fx" name="mat_block_pow">
+			<profile_COMMON>
+				<newparam sid="block_pow_all-surface">
+					<surface type="2D">
+						<init_from>
+							<ref>block_pow_all-image</ref>
+						</init_from>
+					</surface>
+				</newparam>
+				<newparam sid="block_pow_all-sampler">
+					<sampler2D>
+						<source>block_pow_all-surface</source>
+						<instance_image url="#block_pow_all-image" />
+						<wrap_s>CLAMP</wrap_s>
+						<wrap_t>CLAMP</wrap_t>
+						<minfilter>LINEAR</minfilter>
+						<magfilter>LINEAR</magfilter>
+					</sampler2D>
+				</newparam>
+				<technique sid="COMMON">
+					<phong>
+						<diffuse>
+							<texture texture="block_pow_all-sampler" texcoord="TEXCOORD0" />
+						</diffuse>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_geometries>
+		<geometry id="polygon0" name="polygon0">
+			<mesh>
+				<source id="polygon0_Positions">
+					<float_array id="polygon0_PosArr" count="60">8 2 7 8 2 -7 7 0 7 7 0 -7 -7 0 7 -7 0 -7 -8 2 7 -8 2 -7 8 8 -7 8 8 7 8 14 -7 8 14 7 -8 8 7 -8 8 -7 -8 14 7 -8 14 -7 7 16 -7 -7 16 -7 7 16 7 -7 16 7</float_array>
+					<technique_common>
+						<accessor source="#polygon0_PosArr" count="20" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Normals">
+					<float_array id="polygon0_NormArr" count="36">0.96875 -0.234375 0 0.53125 -0.84375 0 -0.53125 -0.84375 0 -0.96875 -0.234375 0 1 0 0 0.96875 0.234375 0 -1 0 0 -0.96875 0.234375 0 0 0 -1 0.53125 0.84375 0 -0.53125 0.84375 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_NormArr" count="12" stride="3">
+							<param name="X" type="float" />
+							<param name="Y" type="float" />
+							<param name="Z" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_UVs0">
+					<float_array id="polygon0_UVArr0" count="26">0.03125 0.9375 0.1015625 0.015625 -0.3359375 0.015625 0.0625 1 0.9375 1 0 0.875 1 0.875 1 0.5 0.9375 0 0.0625 0 1 0.125 0 0.125 0 0.5</float_array>
+					<technique_common>
+						<accessor source="#polygon0_UVArr0" count="13" stride="2">
+							<param name="S" type="float" />
+							<param name="T" type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="polygon0_Vertices">
+					<input semantic="POSITION" source="#polygon0_Positions" />
+				</vertices>
+				<triangles material="mat_block_pow" count="36">
+					<input semantic="VERTEX" source="#polygon0_Vertices" offset="0" />
+					<input semantic="NORMAL" source="#polygon0_Normals" offset="1" />
+					<input semantic="TEXCOORD" source="#polygon0_UVs0" set="0" offset="2" />
+					<p>2 1 0 1 0 0 0 0 0 3 1 0 1 0 0 2 1 0 4 2 0 3 1 0 2 1 0 5 2 0 3 1 0 4 2 0 6 3 0 5 2 0 4 2 0 7 3 0 5 2 0 6 3 0 8 4 2 0 0 1 1 0 1 9 4 2 0 0 1 8 4 2 10 5 1 9 4 2 8 4 2 11 5 1 9 4 2 10 5 1 12 6 2 7 3 1 6 3 1 13 6 2 7 3 1 12 6 2 14 7 1 13 6 2 12 6 2 15 7 1 13 6 2 14 7 1 10 8 5 17 8 4 16 8 3 15 8 6 17 8 4 10 8 5 13 8 7 15 8 6 10 8 5 16 9 0 11 5 0 10 5 0 18 9 0 11 5 0 16 9 0 19 10 0 18 9 0 16 9 0 19 10 0 15 7 0 14 7 0 17 10 0 15 7 0 19 10 0 16 9 0 17 10 0 19 10 0 0 11 10 4 11 9 2 11 8 6 11 11 4 11 9 0 11 10 12 11 12 6 11 11 0 11 10 9 11 7 12 11 12 0 11 10 14 11 5 12 11 12 9 11 7 11 11 6 14 11 5 9 11 7 5 8 8 1 8 11 3 8 9 7 8 10 1 8 11 5 8 8 7 8 10 8 8 12 1 8 11 13 8 7 8 8 12 7 8 10 19 11 3 11 11 6 18 11 4 14 11 5 11 11 6 19 11 3 10 8 5 8 8 12 13 8 7</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_controllers>
+		<controller id="polygon0_Controller">
+			<skin source="#polygon0">
+				<bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+				<source id="polygon0_Joints">
+					<Name_array id="polygon0_JointArr" count="1">pow_block_model</Name_array>
+					<technique_common>
+						<accessor source="#polygon0_JointArr" count="1">
+							<param name="JOINT" type="Name" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Matrices">
+					<float_array id="polygon0_MatArr" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_MatArr" count="1" stride="16">
+							<param type="float4x4" />
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="polygon0_Weights">
+					<float_array id="polygon0_WeightArr" count="1">1</float_array>
+					<technique_common>
+						<accessor source="#polygon0_WeightArr" count="1">
+							<param type="float" />
+						</accessor>
+					</technique_common>
+				</source>
+				<joints>
+					<input semantic="JOINT" source="#polygon0_Joints" />
+					<input semantic="INV_BIND_MATRIX" source="#polygon0_Matrices" />
+				</joints>
+				<vertex_weights count="20">
+					<input semantic="JOINT" offset="0" source="#polygon0_Joints" />
+					<input semantic="WEIGHT" offset="1" source="#polygon0_Weights" />
+					<vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+					<v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+				</vertex_weights>
+			</skin>
+		</controller>
+	</library_controllers>
+	<library_visual_scenes>
+		<visual_scene id="RootNode" name="RootNode">
+			<node id="pow_block_model" name="pow_block_model" sid="pow_block_model" type="JOINT" />
+			<node id="polygon0" name="polygon0" type="NODE">
+				<instance_controller url="#polygon0_Controller">
+					<skeleton>#pow_block_model</skeleton>
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="mat_block_pow" target="#mat_block_pow">
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+								<bind_vertex_input semantic="TEXCOORD0" input_semantic="TEXCOORD" input_set="0" />
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_controller>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#RootNode" />
+	</scene>
+</COLLADA>
